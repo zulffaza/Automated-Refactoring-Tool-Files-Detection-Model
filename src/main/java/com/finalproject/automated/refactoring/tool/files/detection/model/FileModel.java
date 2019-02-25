@@ -2,6 +2,8 @@ package com.finalproject.automated.refactoring.tool.files.detection.model;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * @author Faza Zulfika P P
@@ -11,6 +13,8 @@ import lombok.Data;
 
 @Data
 @Builder
+@ToString(exclude = "content")
+@EqualsAndHashCode(exclude = "content")
 public class FileModel {
 
     private String path;
